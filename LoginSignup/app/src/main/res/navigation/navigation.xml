@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.loginsignup.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.loginsignup.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_FGPWFragment"
+            app:destination="@id/FGPWFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_frontFragment"
+            app:destination="@id/frontFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.loginsignup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/FGPWFragment"
+        android:name="com.example.loginsignup.FGPWFragment"
+        android:label="fragment_f_g_p_w"
+        tools:layout="@layout/fragment_f_g_p_w" >
+        <action
+            android:id="@+id/action_FGPWFragment_to_RPWFragment"
+            app:destination="@id/RPWFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RPWFragment"
+        android:name="com.example.loginsignup.RPWFragment"
+        android:label="fragment_r_p_w"
+        tools:layout="@layout/fragment_r_p_w" />
+    <fragment
+        android:id="@+id/frontFragment"
+        android:name="com.example.loginsignup.FrontFragment"
+        android:label="fragment_front"
+        tools:layout="@layout/fragment_front" />
+</navigation>

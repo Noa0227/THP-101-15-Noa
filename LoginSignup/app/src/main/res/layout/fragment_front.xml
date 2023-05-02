@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FrontFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.loginsignup.FrontViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_front"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="50dp"
+            android:text="@{viewModel.user.toString()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="TextView" />
+
+        <Button
+            android:id="@+id/b_signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/txt_signout"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_front"
+            app:layout_constraintStart_toStartOf="@+id/tv_front"
+            app:layout_constraintTop_toBottomOf="@+id/tv_front" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FGPWFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.loginsignup.FGPWViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_fgpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="@string/txt_fgpassword"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_fgp_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="150dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fgpassword" />
+
+        <EditText
+            android:id="@+id/et_fgp_verificationcode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:hint="@string/txt_verificationcode2"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_fgp_email" />
+
+        <Button
+            android:id="@+id/b_fgp_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/txt_send"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_fgp_email"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fgpassword" />
+
+        <Button
+            android:id="@+id/b_fgp_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/txt_ok"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_fgp_verificationcode" />
+
+        <TextView
+            android:id="@+id/tv_fgp_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_email"
+            app:layout_constraintBottom_toTopOf="@+id/et_fgp_email"
+            app:layout_constraintStart_toStartOf="@+id/et_fgp_email" />
+
+        <TextView
+            android:id="@+id/tv_fgp_verificationcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_verificationcode"
+            app:layout_constraintBottom_toTopOf="@+id/et_fgp_verificationcode"
+            app:layout_constraintStart_toStartOf="@+id/et_fgp_verificationcode" />
+
+        <TextView
+            android:id="@+id/tv_fgp_erroremail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/et_fgp_email"
+            app:layout_constraintStart_toStartOf="@+id/et_fgp_email"
+            app:layout_constraintTop_toBottomOf="@+id/et_fgp_email"
+            tools:text="erroremail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
